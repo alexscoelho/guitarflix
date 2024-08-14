@@ -1,0 +1,105 @@
+/* CourseDetails.css */
+.course-details-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .course-details {
+    background-color: #141414;
+    width: 90%;
+    max-width: 900px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 4px;
+    position: relative;
+  }
+  
+  .close-button {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 30px;
+    color: #fff;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .course-details-content {
+    display: flex;
+    padding: 20px;
+  }
+  
+  .course-details-image {
+    flex: 0 0 40%;
+    margin-right: 20px;
+  }
+  
+  .course-details-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 4px;
+  }
+  
+  .course-details-info {
+    flex: 1;
+  }
+  
+  .course-details-info h2 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+  
+  .course-details-info p {
+    margin-bottom: 10px;
+  }
+  
+  .instructor, .level, .duration {
+    font-size: 14px;
+    color: #ccc;
+  }
+  
+  .price {
+    font-size: 20px;
+    color: #46d369;
+    font-weight: bold;
+  }
+  
+  .description {
+    font-size: 16px;
+    line-height: 1.5;
+    margin-bottom: 20px;
+  }
+  
+  .enroll-button {
+    background-color: #e50914;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .enroll-button:hover {
+    background-color: #f40612;
+  }
+  
+  @media (max-width: 768px) {
+    .course-details-content {
+      flex-direction: column;
+    }
+  
+    .course-details-image {
+      margin-right: 0;
+      margin-bottom: 20px;
+    }
+  }

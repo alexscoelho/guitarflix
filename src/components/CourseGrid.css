@@ -1,0 +1,21 @@
+/* CourseGrid.css */
+.course-grid {
+    padding: 50px 0;
+  }
+  
+  .course-grid h2 {
+    font-size: 2rem;
+    margin-bottom: 30px;
+  }
+  
+  .grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+  }
+  
+  @media (max-width: 768px) {
+    .grid {
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    }
+  }
