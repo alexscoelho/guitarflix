@@ -1,7 +1,7 @@
 // Footer.js
 import React from "react";
+import { Link } from "react-router-dom";
 import "./Footer.css";
-
 import facebookIcon from "../icons/facebook.svg";
 import xIcon from "../icons/x.svg";
 import instagramIcon from "../icons/instagram.svg";
@@ -22,16 +22,16 @@ function Footer() {
             <h3>Quick Links</h3>
             <ul>
               <li>
-                <a href="/courses">Courses</a>
+                <Link to="/#courses">Courses</Link>
               </li>
               <li>
-                <a href="/instructors">Instructors</a>
+                <Link to="/instructors">Instructors</Link>
               </li>
               <li>
-                <a href="/pricing">Pricing</a>
+                <Link to="/pricing">Pricing</Link>
               </li>
               <li>
-                <a href="/faq">FAQ</a>
+                <Link to="/faq">FAQ</Link>
               </li>
             </ul>
           </div>
@@ -39,13 +39,13 @@ function Footer() {
             <h3>Legal</h3>
             <ul>
               <li>
-                <a href="/terms">Terms of Use</a>
+                <Link to="/terms">Terms of Use</Link>
               </li>
               <li>
-                <a href="/privacy">Privacy Policy</a>
+                <Link to="/privacy">Privacy Policy</Link>
               </li>
               <li>
-                <a href="/cookie">Cookie Preferences</a>
+                <Link to="/cookie">Cookie Preferences</Link>
               </li>
             </ul>
           </div>
@@ -53,22 +53,22 @@ function Footer() {
             <h3>Connect</h3>
             <ul className="social-links">
               <li>
-                <a href="#" className="social-icon">
+                <a href="https://facebook.com" className="social-icon">
                   <img src={facebookIcon} alt="Facebook" />
                 </a>
               </li>
               <li>
-                <a href="#" className="social-icon">
+                <a href="https://x.com" className="social-icon">
                   <img src={xIcon} alt="X" />
                 </a>
               </li>
               <li>
-                <a href="#" className="social-icon">
+                <a href="https://instagram.com" className="social-icon">
                   <img src={instagramIcon} alt="Instagram" />
                 </a>
               </li>
               <li>
-                <a href="#" className="social-icon">
+                <a href="https://youtube.com" className="social-icon">
                   <img src={youtubeIcon} alt="YouTube" />
                 </a>
               </li>

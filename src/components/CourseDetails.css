@@ -1,105 +1,177 @@
-/* CourseDetails.css */
-.course-details-overlay {
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background-color: rgba(0, 0, 0, 0.8);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1000;
+/* Basic page layout */
+.course-details {
+  padding: 60px 20px;
+  background-color: #141414;
+  color: white;
+  min-height: 100vh;
+}
+
+.course-details .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Intro video section */
+.video-intro {
+  width: 100%;
+  max-width: 1200px;
+  margin-bottom: 40px;
+}
+
+.video-intro video {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Grid layout for content */
+.content-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* Left column is wider */
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+/* Main content area */
+.main-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.course-description h3, .course-lessons h3 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  border-left: 5px solid #e50914;
+  padding-left: 10px;
+}
+
+.course-description p, .course-lessons p {
+  font-size: 1.1em;
+  color: #b3b3b3;
+}
+
+/* Lesson items */
+.lessons-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+.lesson-item {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 6px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.lesson-item:hover {
+  background-color: #333;
+  transform: scale(1.05);
+}
+
+.lesson-item h4 {
+  margin-bottom: 8px;
+}
+
+/* Back link */
+.back-link {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+}
+
+.back-link:hover {
+  color: #ffffff;
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
   }
-  
-  .course-details {
-    background-color: #141414;
-    width: 90%;
-    max-width: 900px;
-    max-height: 90vh;
-    overflow-y: auto;
-    border-radius: 4px;
-    position: relative;
+
+  .sidebar {
+    margin-top: 20px;
   }
-  
-  .close-button {
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    font-size: 30px;
-    color: #fff;
-    background: none;
-    border: none;
-    cursor: pointer;
-  }
-  
-  .course-details-content {
-    display: flex;
-    padding: 20px;
-  }
-  
-  .course-details-image {
-    flex: 0 0 40%;
-    margin-right: 20px;
-  }
-  
-  .course-details-image img {
-    width: 100%;
-    height: auto;
-    border-radius: 4px;
-  }
-  
-  .course-details-info {
-    flex: 1;
-  }
-  
-  .course-details-info h2 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-  
-  .course-details-info p {
-    margin-bottom: 10px;
-  }
-  
-  .instructor, .level, .duration {
-    font-size: 14px;
-    color: #ccc;
-  }
-  
-  .price {
-    font-size: 20px;
-    color: #46d369;
-    font-weight: bold;
-  }
-  
-  .description {
-    font-size: 16px;
-    line-height: 1.5;
-    margin-bottom: 20px;
-  }
-  
-  .enroll-button {
-    background-color: #e50914;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    font-size: 16px;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-  }
-  
-  .enroll-button:hover {
-    background-color: #f40612;
-  }
-  
-  @media (max-width: 768px) {
-    .course-details-content {
-      flex-direction: column;
-    }
-  
-    .course-details-image {
-      margin-right: 0;
-      margin-bottom: 20px;
-    }
-  }
+}
+
+/* Sidebar content */
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.lesson-materials, .progress {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+/* Material section */
+.lesson-materials h4 {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+}
+
+.material-card {
+  display: flex;
+  align-items: center;
+  background-color: #333;
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  text-decoration: none;
+  color: white;
+}
+
+.material-card:hover {
+  background-color: #454545;
+  transform: translateY(-5px);
+}
+
+.material-icon {
+  width: 40px;
+  height: 40px;
+  margin-right: 15px;
+}
+
+.material-title {
+  font-size: 1.2em;
+  font-weight: 500;
+}
+
+/* Progress section */
+.progress {
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 6px;
+}
+
+.progress h4 {
+  font-size: 1.6em;
+  margin-bottom: 15px;
+}
+
+.progress p {
+  margin-bottom: 10px;
+  color: #b3b3b3;
+}
+
+.progress-bar {
+  background-color: #333;
+  border-radius: 6px;
+  height: 10px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.progress-bar-filled {
+  background-color: #46d369;
+  height: 100%;
+  border-radius: 6px 0 0 6px;
+}

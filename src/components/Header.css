@@ -6,6 +6,7 @@
   right: 0;
   z-index: 1000;
   transition: background-color 0.3s ease;
+  padding: 20px 0;
 }
 
 .header.scrolled {
@@ -16,12 +17,16 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
 }
 
-.header h1 {
+.header .logo {
   color: #e50914;
   font-size: 2rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 .header nav ul {
@@ -34,9 +39,14 @@
 }
 
 .header nav ul li a {
-  color: #ffffff;
+  color: #e5e5e5;
   text-decoration: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
+}
+
+.header nav ul li a:hover {
+  color: #ffffff;
 }
 
 @media (max-width: 768px) {

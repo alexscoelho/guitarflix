@@ -1,32 +1,38 @@
 // Header.js
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 import "./Header.css";
 
 function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
 
-  window.onscroll = () => {
-    setIsScrolled(window.pageYOffset === 0 ? false : true);
-    return () => (window.onscroll = null);
-  };
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.pageYOffset > 0);
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   return (
     <header className={`header ${isScrolled && "scrolled"}`}>
       <div className="container">
-        <h1>GuitarFlix</h1>
+        <Link to="/" className="logo">
+          GuitarFlix
+        </Link>
         <nav>
           <ul>
             <li>
-              <a href="/">Home</a>
+              <Link to="/">Home</Link>
             </li>
             <li>
-              <a href="/courses">Courses</a>
+              <Link to="/#courses">Courses</Link>
             </li>
             <li>
-              <a href="/about">About</a>
+              <Link to="/about">About</Link>
             </li>
             <li>
-              <a href="/contact">Contact</a>
+              <Link to="/contact">Contact</Link>
             </li>
           </ul>
         </nav>
