@@ -64,38 +64,16 @@
   padding: 20px;
   border-radius: 6px;
   transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: pointer;
 }
 
-.lesson-item:hover {
+.lesson-item:hover, .lesson-item.selected {
   background-color: #333;
   transform: scale(1.05);
 }
 
 .lesson-item h4 {
   margin-bottom: 8px;
-}
-
-/* Back link */
-.back-link {
-  color: #e5e5e5;
-  text-decoration: none;
-  font-size: 1.2em;
-  transition: color 0.3s ease;
-}
-
-.back-link:hover {
-  color: #ffffff;
-}
-
-/* Responsive design for smaller screens */
-@media (max-width: 768px) {
-  .content-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .sidebar {
-    margin-top: 20px;
-  }
 }
 
 /* Sidebar content */
@@ -129,29 +107,7 @@
   color: white;
 }
 
-.material-card:hover {
-  background-color: #454545;
-  transform: translateY(-5px);
-}
-
-.material-icon {
-  width: 40px;
-  height: 40px;
-  margin-right: 15px;
-}
-
-.material-title {
-  font-size: 1.2em;
-  font-weight: 500;
-}
-
 /* Progress section */
-.progress {
-  background-color: #1c1c1c;
-  padding: 20px;
-  border-radius: 6px;
-}
-
 .progress h4 {
   font-size: 1.6em;
   margin-bottom: 15px;
@@ -175,3 +131,91 @@
   height: 100%;
   border-radius: 6px 0 0 6px;
 }
+
+/* Detailed lesson view */
+.lesson-details {
+  margin-top: 40px;
+  margin-bottom: 40px;
+}
+
+.lesson-video video {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.lesson-tab h4, .lesson-explanation h4 {
+  font-size: 1.8em;
+  margin-bottom: 10px;
+  border-left: 5px solid #e50914;
+  padding-left: 10px;
+}
+
+.lesson-tab embed {
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.lesson-explanation p {
+  font-size: 1.1em;
+  color: #b3b3b3;
+}
+
+/* Back link */
+.back-link {
+  color: #e5e5e5;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s ease;
+  margin-top: 40px; /* Added top margin for separation */
+  margin-bottom: 20px; /* Added bottom margin for separation */
+}
+
+/* Hover effect */
+.back-link:hover {
+  color: #ffffff; /* Change color on hover */
+  transform: translateX(-5px); /* Add slight movement to the left on hover */
+  text-decoration: underline; /* Underline the link on hover */
+}
+
+/* Responsive design for smaller screens */
+@media (max-width: 768px) {
+  .content-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    margin-top: 20px;
+  }
+
+  .lesson-tab embed {
+    height: 300px;
+  }
+}
+
+.audio-section {
+  margin-top: 40px; /* Space above the audio section */
+  text-align: center; /* Center-align text */
+}
+
+.audio-section h4 {
+  font-size: 1.5em;
+  margin-bottom: 20px;
+  color: white; /* Ensure heading color fits with the Netflix-style theme */
+}
+
+.audio-section audio {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Center the audio player */
+  display: block;
+}
+
+.audio-section iframe {
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto; /* Center the embedded player */
+  border-radius: 8px; /* Optional: rounded corners */
+  display: block;
+}
+
